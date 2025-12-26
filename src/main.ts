@@ -21,7 +21,7 @@ async function bootstrap() {
 
   const renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.setSize(window.innerWidth, window.innerHeight);
-  renderer.setClearColor(0x000000);
+  renderer.setClearColor(0x171716);
   rootContainer.appendChild(renderer.domElement);
 
   camera.position.z = 260;
