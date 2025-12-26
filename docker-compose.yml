@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  vite-app:
+    build: .
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./ssl-certs:/etc/nginx/ssl
+      - ./dist:/usr/share/nginx/html
+    environment:
+      - SSL_TYPE=selfsigned
+      - SSL_DOMAIN=localhost
+    restart: unless-stopped

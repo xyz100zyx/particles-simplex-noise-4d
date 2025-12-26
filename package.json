@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "docker:build": "docker build -t vite-app .",
+    "docker:run": "docker run -p 80:80 -p 443:443 vite-app",
+    "docker:compose": "docker-compose up --build"
   },
   "devDependencies": {
     "@types/three": "^0.182.0",
@@ -15,6 +18,7 @@
     "vite-plugin-glsl": "^1.5.5"
   },
   "dependencies": {
-    "three": "^0.182.0"
+    "three": "^0.182.0",
+    "vite-plugin-pwa": "^1.2.0"
   }
 }

@@ -12,6 +12,7 @@ export class ParticlesModel {
   private threeScene!: THREE.Scene;
   private threeCamera!: THREE.Camera;
 
+  // @ts-ignore
   private loadedGLTF!: GLTF | null;
   private positionBufferAttribute!: THREE.BufferAttribute | null;
   private bufferGeometry!: THREE.BufferGeometry | null;
