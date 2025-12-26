@@ -27,9 +27,8 @@ void main(){
 
 
     vec4 mvPosition = modelViewMatrix * vec4( newPosition, 1. );
-    gl_PointSize = 500. * ( 1. / - mvPosition.z );
+    gl_PointSize = 250. * ( 1. / - mvPosition.z );
     gl_Position = projectionMatrix * modelViewMatrix * vec4( newPosition, 1.0 );
     vPosition = position;
-    vColor = vec3(k, 1.0 - k, k * 0.8);
-    vColor = vec3(normalize(noisePosition));
+    vColor = vec3(vec3(1.0) - normalize(noisePosition));
 }

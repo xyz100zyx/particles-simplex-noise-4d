@@ -2,6 +2,7 @@ import { OrbitControls } from "three/examples/jsm/Addons.js";
 import { ParticlesModel } from "./features/particles-model";
 
 import * as THREE from "three";
+import './style.css'
 
 async function bootstrap() {
   const ROOT_CONTAINER_ID = "app";
@@ -21,7 +22,7 @@ async function bootstrap() {
 
   const renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.setSize(window.innerWidth, window.innerHeight);
-  renderer.setClearColor(0x171716);
+  renderer.setClearColor(0x3d3d3d);
   rootContainer.appendChild(renderer.domElement);
 
   camera.position.z = 260;
